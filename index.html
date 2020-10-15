@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olá Qualquer coisa</title>
+    <script src="script.js" type="text/javascript"></script>
+    <link href="style.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div id="base">
+
+        <form action="forname">
+            <label for="nome"><h2> Coloque o seu primeiro nome: </h2></label><br>
+            <input type="text" id="nome" required="required" name="text" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" />
+            
+        </form>
+
+        <button onclick="nameResult()"> Ok </button><br>
+        
+        <div id="resultado">... </div>
+
+    </div>
+</body>
+
+</html>
+
+
+<!-- 
+    function nameResult(){
+        var nome = document.getElementById('nome').value
+        var resultado = document.getElementById('resultado')
+
+        //Ateração primeira letra maiuscula resto minuscula
+        var teste = nome;
+        teste = teste.toLowerCase().replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+        
+        if ( nome == '' || nome<= ' '){
+            resultado.innerHTML = `Olá, Nome`
+        }
+        else{
+            resultado.innerHTML = `Olá, ${teste}`
+        }
+        
+    }
+
+
+    function nameResult(){
+    var nome = document.getElementById('nome').value
+    var resultado = document.getElementById('resultado')
+    
+
+    nome = nome.toLowerCase().replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+    
+    if ( nome == '' || nome== ' '){
+        resultado.innerHTML = `Olá, Nome`
+    }
+    else{
+        resultado.innerHTML = `Olá, ${nome}`
+    }    
+}
+==================================================
+
+
+==================================================
+
+Em sua linguagem de preferência, defina uma função que retorne "Olá, Nome!" 
+ao passar um nome como parâmetro, ou "Olá, Mundo!" se não for passado nenhum
+nome como parâmetro ou for string vazia.
+
+Assuma que o nome seja uma string, verifique por erros de digitação, 
+o nome retornado deve ser com a primeira letra em maiúscula.
+
+Exemplos:
+definindo nome - "thiago", resultado - "Olá, Thiago!"
+definindo nome - "raFAEL", resultado - "Olá, Rafael!"
+definindo nome - , resultado - "Olá, Mundo!"
+definindo nome - ““, resultado - "Olá, Mundo!"
+-->
